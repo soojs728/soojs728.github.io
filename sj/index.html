@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 메타포 -->
+    <!-- 파비콘 -->
+    <!-- 오픈그래프 -->
+    <title>신수진의 포트폴리오</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        var ht = $(window).height();
+        $(".gnb li button").click(function(){
+            var pos = parseInt($(this).attr("pos"));
+            var data = pos * ht;
+            $("body, html").not(":animated").animate({scrollTop : data+"px"}, 800);
+        });
+    });   
+    </script>
+    <link rel="stylesheet" href="common.css">
+    
+    <style>
+    body,html { overflow-x: hidden; }    
+    .vs_fr { width: 100vw; height: 100vh; overflow:hidden; }
+    .page_wrap { clear:both; width: 1200px; margin: 200px auto; position:relative; }
+    .page_tit { margin:50px; }
+    .photo_data { width: 300px; height: 400px; overflow:hidden; border-radius:200px; overflow:hidden; position:absolute; top: 50px; left: 150px; }
+    @keyframes intro_pic {
+        0% { transform: rotate(0deg) scale(0.5);}
+        40% { transform: rotate(3600deg) scale(1); }
+        80% { transform: rotate(0deg) scale(0.5); }
+        100% { transform:translateX(90px); }
+    }
+    .photo_data img { display:block; width: 100%; height:auto; }
+    .intro_con { width: 600px; float:right; }
+    .intro_con li {clear: both; }]3/3
+    .intro_con li span { display:inline-block; text-align: justify; text-justify:inter-character; padding: 10px; }
+    .intro_con li .intro_item_tit { width: 100px; font-size:20px; }
+    .intro_con li .intro_item_con { display:none; margin:20px; }
+
+    .skill_fr { width: 1195px; height:350px; border-left:5px solid #333; 
+    border-bottom:5px solid #333; }
+    .skill_fr li { width: 16%; float:left; height: 400px; position:relative; }
+    .skill_fr li span { display:block; position:absolute; left:0px; } 
+    .skill_fr li span.bar { bottom:48px; width: 50px; background-color: blueviolet; height:10px; left: 50px; transition-duration:1.5s; }
+    .skill_fr li span.lb { bottom:0px; width: 80%; text-align:center; }
+
+    .gal_fr { clear:both; width: 1200px; margin: 0 auto; }
+    .gal_fr li { width:300px; float:left; margin: 50px; position:relative; }
+    .gal_fr li a { display:block; width:300px; height: auto; }
+    .gal_fr li img { display:block; width: 300px; height: auto; }
+    .gal_fr li a .gal_tit_fr { position:absolute; width:100%; top:0px; left:0; height:100%; opacity:0; visibility:hidden; transition-duration:0.7s; color:rgb(255, 145, 0); text-align:center; font-weight:bolder; font-size:large; }
+    .gal_fr li a .gal_tit { line-height: 3; padding-top: 50px; }
+    .gal_fr li a .gal_com { line-height:1.6; padding-top:20px; }
+    .gal_fr li a:hover .gal_tit_fr { opacity: 1; visibility: visible; }
+
+    .social_fr { clear:both; width: 1200px; margin: 0 auto; }
+    .social_fr li { float:left; margin: 20px; }
+    .social_fr li.mobile { display:none; }
+
+    .notice_fr { padding:200px 50px; }
+    .notice_fr p { margin:20px; font-size:40px; font-weight:bold; color:rgb(110, 110, 110); }
+
+    #quick { width:200px; height:200px; text-align:center; }
+    #quick a { color:gray; text-decoration:none; font-size:20px; }
+
+    @media screen and (max-width:767px) {   /* 모바일의 실제 크기 : 767px 이하 */
+        .social_fr li:nth-child(4n) { clear:both; }
+        .social_fr li.mobile { display:block; }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hd">
+            <nav class="gnb">
+                <ul>
+                    <li><button pos="0">HOME</button></li>
+                    <li><button pos="1">Intro</button></li>
+                    <li><button pos="2">Skill</button></li>
+                    <li><button pos="3">Portfolio</button></li>
+                    <li><button pos="4">Contact</button></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <figure class="vs">
+                <div class="vs_fr">
+                    <video autoplay loop muted>
+                        <source src="hello_world_-_28320 (Original).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </figure>
+            <section class="page" id="page1">
+                <div class="page_wrap">
+                    <h2 class="page_tit">Intro</h2>
+                    <div class="photo_data">
+                        <img src="IMG_3469-11증명.jpg" alt="">
+                    </div>
+                    <ul class="intro_con">
+                        <li class="item1"><span class="intro_item_tit">이름</span><span class="intro_item_con">신수진</span></li>
+                        <li class="item2"><span class="intro_item_tit">나이</span><span class="intro_item_con">25세 (1998년생)</span></li>
+                        <li class="item3"><span class="intro_item_tit">희망직종</span><span class="intro_item_con">백엔드 개발자</span></li>
+                        <li class="item4"><span class="intro_item_tit">희망지역</span><span class="intro_item_con">서울/경기 지역</span></li>
+                        <li class="item5"><span class="intro_item_tit">사는 곳</span><span class="intro_item_con">경기도 고양시</span></li>
+                    </ul>
+                </div>
+                <script>
+                $(function(){
+                    $(".intro_con li").each(function(){
+                        $(this).find(".intro_item_con").delay($(this).index()*500).fadeIn(1000);
+                    });    
+                });    
+                </script>
+            </section>
+            <section class="page" id="page2">
+                <div class="page_wrap">
+                    <h2 class="page_tit">Skill</h2>
+                    <ul class="skill_fr">
+                        <li class="item1">
+                            <span class="bar" data-len="30"></span>
+                            <span class="lb">JAVA</span>
+                        </li>
+                        <li class="item2">
+                            <span class="bar" data-len="50"></span>
+                            <span class="lb">JSP</span>
+                        </li>
+                        <li class="item3">
+                            <span class="bar" data-len="30"></span>
+                            <span class="lb">MVC2</span>
+                        </li>
+                        <li class="item4">
+                            <span class="bar" data-len="80"></span>
+                            <span class="lb">HTML</span>
+                        </li>
+                        <li class="item5">
+                            <span class="bar" data-len="80"></span>
+                            <span class="lb">CSS</span>
+                        </li>
+                        <li class="item6">
+                            <span class="bar" data-len="20"></span>
+                            <span class="lb">JAVASCRIPT/JQUERY</span>
+                        </li>
+                    </ul>   
+                </div>
+                <script>
+                $(function(){
+                    $("#page2").hover(function(){
+                        $(".skill_fr li").each(function(){
+                            var skill = parseInt($(this).find(".bar").attr("data-len"));
+                            $(this).find(".bar").height(skill*3.5);
+                        });
+                    });
+                });    
+                </script>
+            </section>
+            <section class="page" id="page3">
+                <div class="page_wrap">
+                    <h2 class="page_tit">Portfolio</h2>
+                    <ul class="gal_fr">
+                        <li class="item1">
+                            <a href="https://soojs728.github.io/web01" target="_blank">
+                                <img src="web01.png" alt="">
+                                <div class="gal_tit_fr">
+                                    <h3 class="gal_tit">현대오토에버</h3>
+                                    <p class="gal_com">유형 : 브랜드형</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item2">
+                            <a href="https://soojs728.github.io/web03" target="_blank">
+                                <img src="web03.png" alt="">
+                                <div class="gal_tit_fr">
+                                    <h3 class="gal_tit">고양시 관광문화</h3>
+                                    <p class="gal_com">유형 : 관공서형</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item3">
+                            <a href="https://soojs728.github.io/web04" target="_blank">
+                                <img src="web04.png" alt="">
+                                <div class="gal_tit_fr">
+                                    <h3 class="gal_tit">외교부</h3>
+                                    <p class="gal_com">유형 : 관공서형</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="https://github.com/soojs728" target="_blank" class="detail">자세히 보기</a>
+                </div>
+            </section>
+            <section class="page" id="page4">
+                <div class="page_wrap">
+                    <h2 class="page_tit">Contact</h2>
+                    <div class="notice_fr">
+                        <p>Tel : 010-2375-7797</p>
+                        <p>E-mail : vviva6@naver.com</p>
+                    </div>
+                    <ul class="social_fr">
+                        <li class="item1"><a href="https://youtu.be/SBw5Wcr_NnI" target="_blank">유튜브</a></li>
+                        <li class="item2"><a href="https://github.com/soojs728" target="_blank">깃허브</a></li>
+                    </ul>   
+                </div>
+            </section>
+        </div>
+        <footer class="ft">
+
+        </footer>
+    </div>
+    <div id="quick">
+        <ul>
+            <li>- Quick -</li>
+            <li class="item0"><a href="#">HOME</a></li>
+            <li class="item1"><a href="#page1">Intro</a></li>
+            <li class="item2"><a href="#page2">Skill</a></li>
+            <li class="item3"><a href="#page3">Portfolio</a></li>
+            <li class="item4"><a href="#page4">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>
